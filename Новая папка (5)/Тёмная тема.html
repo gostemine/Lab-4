@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переключатель света</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+            background-color: #f4f4f4;
+            color: #333; 
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Переключатель света</h1>
+    <button onclick="toggleMode()">Изменить режим</button>
+
+    <script>
+        var darkMode = false;
+
+        function toggleMode() {
+            var body = document.body;
+
+            if (darkMode) {
+                body.style.backgroundColor = "#f4f4f4";
+                body.style.color = "#333";
+                darkMode = false;
+            } else {
+                body.style.backgroundColor = "#333";
+                body.style.color = "#f4f4f4";
+                darkMode = true;
+            }
+        }
+    </script>
+</body>
+</html>
